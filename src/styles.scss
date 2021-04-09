@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */ 
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.stripes {
+    $randomStripColor: rgb(231,245,246);
+    background: rgb(214,234,236);
+    background-image: 
+        linear-gradient(90deg, $randomStripColor 100px, transparent 0),
+        linear-gradient(90deg, $randomStripColor 0px, transparent 0);
+    background-size: 125px 100%;
+  }
+
+  .slick-list {
+    height: 100%
+  }
+  
+  .slick-track {
+    display: flex ;
+    align-items: center ;
+    height: 100% ;
+  }
+
+  

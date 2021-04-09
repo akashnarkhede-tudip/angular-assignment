@@ -1,0 +1,32 @@
+<ngx-slick-carousel 
+    class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig"
+    (beforeChange)="beforeChangeEvent($event)">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img [src]="slide.imagePath" [alt]="slide.name" class="display-inline">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h5 class="display-inline">{{ slide.name }}</h5>
+                    </div>
+                </div>
+                <div class="start-here pt-5">
+                    START HERE<span class="start-here-logo pl-3"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ngx-slick-carousel>
+
+<span class="icon left-arrow-btn" (click)="slickModal.slickGoTo(currentSlide - 1)">
+    <img src="../../assets/img/left-arrow.png">
+</span>
+<span class="icon right-arrow-btn" (click)="slickModal.slickGoTo(currentSlide + 1)">
+    <img src="../../assets/img/right-arrow.png">
+</span>
